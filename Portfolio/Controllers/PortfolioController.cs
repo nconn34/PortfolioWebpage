@@ -62,12 +62,16 @@ namespace Portfolio.Controllers
     {
       return View();
     }
-        public ActionResult Work()
+    public ActionResult Work()
     {
       return View();
     }
     
-        public ActionResult AboutMe()
+    public ActionResult AboutMe()
+    {
+      return View();
+    }
+    public ActionResult Education()
     {
       return View();
     }

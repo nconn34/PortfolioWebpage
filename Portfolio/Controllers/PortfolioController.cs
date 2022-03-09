@@ -66,5 +66,10 @@ namespace Portfolio.Controllers
     {
       return View();
     }
+    
+        public ActionResult AboutMe()
+    {
+      return View();
+    }
   }
 }

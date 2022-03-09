@@ -1,0 +1,21 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Portfolio.Models.Skills
+
+<h2>Edit</h2>
+
+<h4>Edit this skill: @Html.DisplayFor(model => model.Strength)</h4>
+
+@using (Html.BeginForm())
+{
+  @Html.HiddenFor(model => model.SkillsId)
+
+  @Html.LabelFor(model => model.Strength)
+  @Html.EditorFor(model => model.Strength)
+
+  <input type="submit" value="Save" />
+}
+
+<p>@Html.ActionLink("Back to list", "Index")</p>

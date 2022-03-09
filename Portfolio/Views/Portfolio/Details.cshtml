@@ -1,0 +1,12 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Portfolio.Models.Skills
+
+<h2>Skill Details</h2>
+<hr />
+<h3>@Html.DisplayNameFor(model => model.Strength): @Html.DisplayFor(model => model.Strength)</h3>
+<h3>@Html.DisplayNameFor(model => model.TeamContribution): @Html.DisplayFor(model => model.TeamContribution)</h3>
+<p>@Html.ActionLink("Back to Skills", "Index")</p>
+<p>@Html.ActionLink("Delete Skill", "Delete", new { id = Model.SkillsId })</p>

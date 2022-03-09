@@ -1,0 +1,21 @@
+@{
+  Layout = "_Layout";
+}
+
+ @using Portfolio.Models;
+ @model List<Portfolio.Models.Skills>;
+
+<h1>Skills</h1>
+
+@if (@Model.Count == 0)
+{
+  <h3>No Skills have been added yet!</h3>
+} 
+
+  @foreach (Skills portfolio in Model)
+  {
+    <li>@Html.ActionLink($"{portfolio.Strength}", "Details", new { id = portfolio.SkillsId }) | @portfolio.TeamContribution </li>
+  }
+
+<p>@Html.ActionLink("Add new skill", "Create")</p>
+<p>@Html.ActionLink("Home", "Index", "Home")</p>

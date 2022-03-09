@@ -1,0 +1,19 @@
+@{
+  Layout = "_Layout";
+}
+
+
+@model Portfolio.Models.Skills
+
+<h1>Enter the information for your Skills below: </h1>
+@using (Html.BeginForm())
+{
+  @Html.LabelFor(model => model.Strength)
+  @Html.TextBoxFor(model => model.Strength)
+
+  @Html.LabelFor(model => model.TeamContribution)
+  @Html.TextBoxFor(model => model.TeamContribution)
+
+  <input type="submit" value="Add new skill" />
+}
+<p>@Html.ActionLink("Show all Skills", "Index")</p>
